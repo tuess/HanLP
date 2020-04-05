@@ -1,5 +1,6 @@
 HanLP: Han Language Processing
 =====
+DemoAtFirstSight是基本例子，DemoTrainCWS是训练的感知机模型
 
 汉语言处理包
 [![Maven Central](https://img.shields.io/maven-central/v/com.hankcs/hanlp?label=maven)](https://mvnrepository.com/artifact/com.hankcs/hanlp)

@@ -51,16 +51,16 @@ public class DemoAtFirstSight {
         segment.enablePlaceRecognize(true);
         segment.enableCustomDictionary(true);
         segment.enableCustomDictionaryForcing(false);
-//        System.out.println(HanLP.segment(text));
+        System.out.println(HanLP.segment(text3));
+        System.out.println(HanLP.extractSummary(text3, 5));
 
 //        按中文符号摘要;
-        List<String> result = HanLP.extractSummary(text1, 5);
-        for (String string : result) {
-            System.out.print(HanLP.segment(string));
-            List<Term> terms = HanLP.segment(string);
-            System.out.println("\n"+NotionalTokenizer.segment(terms.toString())+"\n");
-        }
-
+//        List<String> result = HanLP.extractSummary(text1, 5);
+//        for (String string : result) {
+//            System.out.print(HanLP.segment(string));
+//            List<Term> terms = HanLP.segment(string);
+//            System.out.println("\n"+NotionalTokenizer.segment(terms.toString())+"\n");
+//        }
 
 
     }

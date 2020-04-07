@@ -74,7 +74,7 @@ public class HanLP
         /**
          * 用户自定义词典路径
          */
-        public static String CustomDictionaryPath[] = new String[]{"data/dictionary/custom/CustomDictionary.txt","data/dictionary/custom/MyDictionary.txt"};
+        public static String[] CustomDictionaryPath = new String[]{"data/dictionary/custom/CustomDictionary.txt","data/dictionary/custom/MyDictionary.txt"};
         /**
          * 2元语法词典路径
          */
@@ -204,7 +204,7 @@ public class HanLP
         /**
          * 分词结果是否展示词性
          */
-        public static boolean ShowTermNature = true;
+        public static boolean ShowTermNature = false;
         /**
          * 是否执行字符正规化（繁体->简体，全角->半角，大写->小写），切换配置后必须删CustomDictionary.txt.bin缓存
          */

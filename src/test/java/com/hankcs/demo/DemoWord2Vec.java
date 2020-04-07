@@ -27,17 +27,20 @@ import java.util.Map;
  */
 public class DemoWord2Vec
 {
-    private static final String TRAIN_FILE_NAME = MSR.TRAIN_PATH;
-    private static final String MODEL_FILE_NAME = "data/test/word2vec.txt";
+//    训练语料文件
+    private static final String TRAIN_FILE_NAME = "data/test/mydata/word2vecdata.txt";
+//    训练模型输出路径
+    private static final String MODEL_FILE_NAME = "data/test/mydata/word2vec.txt";
 
     public static void main(String[] args) throws IOException
     {
         WordVectorModel wordVectorModel = trainOrLoadModel();
-        printNearest("上海", wordVectorModel);
+        printNearest("封锁", wordVectorModel);
         printNearest("美丽", wordVectorModel);
         printNearest("购买", wordVectorModel);
-        System.out.println(wordVectorModel.similarity("上海", "广州"));
-        System.out.println(wordVectorModel.analogy("日本", "自民党", "共和党"));
+        System.out.println(wordVectorModel.nearest("数据"));
+//        System.out.println(wordVectorModel.similarity("上海", "广州"));
+//        System.out.println(wordVectorModel.analogy("日本", "自民党", "共和党"));
 
         // 文档向量
         DocVectorModel docVectorModel = new DocVectorModel(wordVectorModel);
@@ -49,18 +52,18 @@ public class DemoWord2Vec
             "中国足球失败",
         };
 
-        System.out.println(docVectorModel.similarity(documents[0], documents[1]));
-        System.out.println(docVectorModel.similarity(documents[0], documents[4]));
+//        System.out.println(docVectorModel.similarity(documents[0], documents[1]));
+//        System.out.println(docVectorModel.similarity(documents[0], documents[4]));
 
         for (int i = 0; i < documents.length; i++)
         {
             docVectorModel.addDocument(i, documents[i]);
         }
 
-        printNearestDocument("体育", documents, docVectorModel);
-        printNearestDocument("农业", documents, docVectorModel);
-        printNearestDocument("我要看比赛", documents, docVectorModel);
-        printNearestDocument("要不做饭吧", documents, docVectorModel);
+//        printNearestDocument("体育", documents, docVectorModel);
+//        printNearestDocument("农业", documents, docVectorModel);
+//        printNearestDocument("我要看比赛", documents, docVectorModel);
+//        printNearestDocument("要不做饭吧", documents, docVectorModel);
     }
 
     static void printNearest(String word, WordVectorModel model)

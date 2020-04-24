@@ -50,7 +50,7 @@ public class DemoAtFirstSight {
         Segment segment = new ViterbiSegment();
         segment.enablePlaceRecognize(true);
         segment.enableCustomDictionary(true);
-        segment.enableCustomDictionaryForcing(false);
+        segment.enableCustomDictionaryForcing(true);
         System.out.println(HanLP.segment(text3));
         System.out.println(HanLP.extractSummary(text3, 5));
 

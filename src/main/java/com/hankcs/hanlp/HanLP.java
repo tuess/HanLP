@@ -204,7 +204,7 @@ public class HanLP
         /**
          * 分词结果是否展示词性
          */
-        public static boolean ShowTermNature = false;
+        public static boolean ShowTermNature = true;
         /**
          * 是否执行字符正规化（繁体->简体，全角->半角，大写->小写），切换配置后必须删CustomDictionary.txt.bin缓存
          */

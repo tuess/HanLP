@@ -66,6 +66,8 @@ public class DemoTrainCWS {
 
 //        测试
         PerceptronLexicalAnalyzer analyzer = new PerceptronLexicalAnalyzer("data/test/mydata/cws.bin", "data/test/mydata/pos.bin","data/test/mydata/ner.bin");
-        System.out.println(analyzer.segment(text));
+
+        analyzer.enableCustomDictionary(true);
+        System.out.println(analyzer.analyze(text));
 }
 }
